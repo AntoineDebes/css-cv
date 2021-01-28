@@ -85,10 +85,10 @@ h3{
 .skills-secondary{
     opacity: 0.6;
 }
-.skills-secondary::before{ /* opacity:1; */
+.skills-secondary::before{ /* Other must have Opacity:1; */
     content:"Other";
 }
-.experience:last-child{ /* section Exp*/
+.experience:last-child{ /* Section Exp*/
     display:none;
 }
 .experience-type{
@@ -129,7 +129,7 @@ ul li::marker{
     color:black;
     font-size:initial;
 }
-#contact{
+#contact{                      /*Couldn't make the flex-box grow with the background-color */
     position:absolute;
     top:0;
     right:0;
@@ -165,10 +165,11 @@ ul li::marker{
     flex-grow:2;
     color:red;
     width:100%;
-    background-color:black
+    background-color:black;
 }
 .contact-value :link{
     color:red;
+    text-decoration: none;
 }
 @media(min-width: 800px){
     header div{
