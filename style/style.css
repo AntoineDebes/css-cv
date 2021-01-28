@@ -1,0 +1,201 @@
+#wrapper{
+    display:flex;
+    
+}
+header{
+    background-color:gray;
+    padding:2rem;
+}
+hgroup{
+    color:red;
+    margin-left:0.9rem;
+}
+figure{
+    margin-left:1.6rem;
+}
+.content{
+    display:flex;
+    flex-direction: column;
+    padding:2rem;
+}
+h3{
+    border-bottom: 1px dashed gray;
+    display:list-item;
+    list-style-position:inside;
+    list-style-type:disc; 
+}
+::marker{
+    color:red;
+    font-size:2rem;
+} 
+#competencies{
+    display:flex;
+    flex-direction: column;
+}
+@keyframes load{
+    from{
+        width:0%;
+    }
+    
+}
+.skills{
+   padding:0.5rem;
+}
+}
+.skills-primary{
+    opacity:0.9;
+}
+.skills-primary::before{
+    content:"Main";
+}
+.skill{
+    background-color: gray;
+    padding:0.3rem;
+    margin-top:0.09rem;
+    text-shadow: 1px 1px 1px black;
+    display:flex;
+}
+.skill span{
+    color:white;
+}
+.skill::before{
+    content:"";
+    background-color:red;
+    display:inline-flex;
+    animation: load 2s 0s;
+}
+[data-skill="5"]::before{
+    width:50%;
+}
+[data-skill="3"]::before{
+    width:30%;
+}
+[data-skill="1"]::before{
+    width:10%;
+}
+[data-skill="9"]::before{
+    width:90%;
+}
+[data-skill="5"]::before{
+    width:50%;
+}
+[data-skill="7"]::before{
+    width:70%;
+}
+.skills-secondary{
+    opacity: 0.6;
+}
+.skills-secondary::before{ /* opacity:1; */
+    content:"Other";
+}
+.experience:last-child{ /* section Exp*/
+    display:none;
+}
+.experience-type{
+    color:red;
+}
+.experience-institution{
+    color:red;
+}
+.experience-details{
+    margin-top:-1.3rem;
+    margin-left:1rem;
+}
+.experience-location{
+    color:gray;
+}
+.day{
+    color:gray;
+}
+.experience-date-separator{
+    color:red;
+}
+.month{
+    color:gray;
+}
+.year{
+    color:gray;
+}
+#education{
+    display: none;
+}
+#hobbies{
+    display: none;
+}
+#contact{
+    display: none;
+}
+ul li::marker{
+    color:black;
+    font-size:initial;
+}
+#contact{
+    position:absolute;
+    top:0;
+    right:0;
+    margin:1rem 1rem 1rem 0; 
+    width:100%;
+    display:block;
+}
+#contact h3{
+    display:none;
+}
+.contacts{
+    display:none;
+    width:40%;
+    flex-direction: column;
+    margin-top:0.5rem;
+    float:right;
+}
+.contact{
+    display:flex;
+}
+.contact-email{
+    color:white;
+}
+.contact-type{
+    flex-grow: 1;
+    background-color:red;
+    color:white;
+    width:100%;
+    border:1px solid black;
+    height:100%;
+}
+.contact-value{
+    flex-grow:2;
+    color:red;
+    width:100%;
+    background-color:black
+}
+.contact-value :link{
+    color:red;
+}
+@media(min-width: 800px){
+    header div{
+        display:flex;
+    flex-direction: row;
+    margin-left:5rem;
+    }
+    figure{
+        margin-left:3rem;
+    }.content{
+        flex-wrap:wrap;
+        flex-direction: row;
+    }
+    .content section{
+        width:50%;
+    }
+    .experience:last-child{
+        display:inherit;
+    }
+    #education{
+        display:block;
+    }
+    #hobbies{
+        display:block;
+    }
+    .contacts{
+        display:flex;
+    }
+
+}
