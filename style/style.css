@@ -1,3 +1,6 @@
+html {
+  font-family: sans-serif;
+}
 #wrapper {
   display: flex;
 }
@@ -18,14 +21,13 @@ figure {
   padding: 2rem;
 }
 h3 {
-  border-bottom: 1px dashed gray;
-  display: list-item;
-  list-style-position: inside;
-  list-style-type: disc;
+  border-bottom: 2px solid gray;
 }
-::marker {
+h3::before {
+  content: "\2022";
+  font-size: 3rem;
   color: red;
-  font-size: 2rem;
+  margin-right: 0.5rem;
 }
 #competencies {
   display: flex;
@@ -44,9 +46,10 @@ h3 {
 }
 .skills-primary::before {
   content: "Main";
+  color: black;
 }
 .skill {
-  background-color: gray;
+  background-color: #a0a0a0;
   padding: 0.3rem;
   margin-top: 0.09rem;
   text-shadow: 1px 1px 1px black;
@@ -54,33 +57,43 @@ h3 {
 }
 .skill span {
   color: white;
+  order: 1;
+  z-index: 2;
 }
 .skill::before {
   content: "";
   background-color: red;
   display: inline-flex;
   animation: load 2s 0s;
+  order: 2;
+  z-index: 1;
 }
 [data-skill="5"]::before {
   width: 50%;
+  opacity: 1;
 }
 [data-skill="3"]::before {
   width: 30%;
+  opacity: 1;
 }
 [data-skill="1"]::before {
   width: 10%;
+  opacity: 1;
 }
 [data-skill="9"]::before {
   width: 90%;
+  opacity: 0.9;
 }
 [data-skill="5"]::before {
   width: 50%;
+  opacity: 0.9;
 }
 [data-skill="7"]::before {
   width: 70%;
+  opacity: 0.9;
 }
 .skills-secondary {
-  opacity: 0.6;
+  opacity: 0.8;
 }
 .skills-secondary::before {
   /* Other must have Opacity:1; */
@@ -132,43 +145,46 @@ ul li::marker {
   /*Couldn't make the flex-box grow with the background-color */
   display: none;
   position: absolute;
-  margin: 1rem 1rem 1rem 0;
-  width: 100%;
-  display: flex;
   top: 0;
-  left: 50%;
+  right: 0;
+  width: 100%;
 }
 #contact h3 {
   display: none;
 }
 .contacts {
   display: flex;
-  width: 40%;
+  width: 50%;
   flex-direction: column;
-  margin-top: 0.5rem;
-}
-.contact {
-  display: inline-flex;
+  margin-top: 2.5rem;
+  margin-left: 50%;
 }
 .contact-email {
   color: white;
 }
 .contact-type {
-  flex-grow: 1;
   background-color: red;
   color: white;
-  border: 1px solid black;
-  width: 50%;
+  width: 20%;
+  flex-grow: 1;
 }
 .contact-value {
-  flex-grow: 2;
   color: red;
-  width: 100%;
   background-color: black;
+  width: 75%;
+  flex-grow: 2;
 }
 .contact-value :link {
   color: red;
   text-decoration: none;
+}
+dl {
+  margin: 0;
+  display: flex;
+}
+dd {
+  display: flex;
+  margin: 0;
 }
 @media (min-width: 800px) {
   header div {
