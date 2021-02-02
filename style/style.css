@@ -22,12 +22,16 @@ figure {
 }
 h3 {
   border-bottom: 2px solid gray;
+  padding-left: 2rem;
+  position: relative;
+  display: flex;
 }
 h3::before {
   content: "\2022";
   font-size: 3rem;
   color: red;
-  margin-right: 0.5rem;
+  position: absolute;
+  margin: -1rem;
 }
 #competencies {
   display: flex;
@@ -187,7 +191,7 @@ dd {
   display: flex;
   margin: 0;
 }
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   header div {
     display: flex;
     flex-direction: row;
