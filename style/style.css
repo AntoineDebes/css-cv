@@ -186,6 +186,9 @@ ul li::marker {
 .contact-value a:visited {
   color: red;
 }
+.contact-value a:active {
+  color: red;
+}
 dl {
   margin: 0;
   display: flex;
