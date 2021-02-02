@@ -13,7 +13,7 @@ hgroup {
   margin-left: 0.9rem;
 }
 figure {
-  margin-left: 1.6rem;
+  margin-right: 1.6rem;
 }
 .content {
   display: flex;
@@ -21,8 +21,8 @@ figure {
   padding: 2rem;
 }
 h3 {
-  border-bottom: 2px solid gray;
-  padding-left: 2rem;
+  border-bottom: 1px solid gray;
+  padding-left: 1rem;
   position: relative;
   display: flex;
 }
@@ -204,7 +204,7 @@ dd {
     margin-left: 5rem;
   }
   figure {
-    margin-left: 3rem;
+    padding-left: 7rem;
   }
   .content {
     flex-wrap: wrap;
