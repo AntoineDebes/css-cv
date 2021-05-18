@@ -3,6 +3,7 @@ html {
 }
 #wrapper {
   display: flex;
+  position: relative;
 }
 header {
   background-color: gray;
@@ -45,9 +46,6 @@ h3::before {
 .skills {
   padding: 0.5rem;
 }
-.skills-primary {
-  opacity: 0.9;
-}
 .skills-primary::before {
   content: "Main";
   color: black;
@@ -87,18 +85,15 @@ h3::before {
 }
 [data-skill="9"]::before {
   width: 90%;
-  opacity: 0.9;
 }
 [data-skill="5"]::before {
   width: 50%;
-  opacity: 0.9;
 }
 [data-skill="7"]::before {
   width: 70%;
-  opacity: 0.9;
 }
-.skills-secondary {
-  opacity: 0.8;
+.skills-secondary .skill {
+  opacity: 0.7;
 }
 .skills-secondary::before {
   /* Other must have Opacity:1; */
@@ -139,9 +134,7 @@ h3::before {
 #hobbies {
   display: none;
 }
-#contact {
-  display: none;
-}
+
 ul li::marker {
   color: black;
   font-size: initial;
@@ -149,9 +142,6 @@ ul li::marker {
 #contact {
   /*Couldn't make the flex-box grow with the background-color */
   display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
   width: 100%;
 }
 #contact h3 {
@@ -159,10 +149,12 @@ ul li::marker {
 }
 .contacts {
   display: flex;
-  width: 50%;
+  width: 35%;
   flex-direction: column;
   margin-top: 2.5rem;
-  margin-left: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .contact-email {
   color: white;
