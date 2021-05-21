@@ -1,220 +1,117 @@
-html {
-  font-family: sans-serif;
+:root {
+  font-size: calc(9px + 1vw);
 }
-#wrapper {
+
+body {
+  padding: 0 3%;
+}
+/* HEADER-SECTION */
+header > div {
   display: flex;
-  position: relative;
+  flex-direction: column;
 }
-header {
-  background-color: gray;
-  padding: 2rem;
-}
+
 hgroup {
-  color: red;
-  margin-left: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 1;
 }
-figure {
-  margin-right: 1.6rem;
+
+header figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 .content {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-}
-h3 {
-  border-bottom: 1px solid gray;
-  padding-left: 1rem;
-  position: relative;
-  display: flex;
-}
-h3::before {
-  content: "\2022";
-  font-size: 3rem;
-  color: red;
-  position: absolute;
-  margin: -1rem;
-}
-#competencies {
-  display: flex;
-  flex-direction: column;
-}
-@keyframes load {
-  from {
-    width: 0%;
-  }
-}
-.skills {
-  padding: 0.5rem;
-}
-.skills-primary::before {
-  content: "Main";
-  color: black;
-}
-.skill {
-  background-color: #a0a0a0;
-  padding: 0.3rem;
-  margin-top: 0.09rem;
-  text-shadow: 1px 1px 1px black;
-  display: flex;
-  height: 1rem;
-}
-.skill span {
-  color: white;
-  order: 1;
-  z-index: 2;
-  position: absolute;
-}
-.skill::before {
-  content: "";
-  background-color: red;
-  display: inline-flex;
-  animation: load 2s 0s;
-  order: 2;
-}
-[data-skill="5"]::before {
-  width: 50%;
-  opacity: 1;
-}
-[data-skill="3"]::before {
-  width: 30%;
-  opacity: 1;
-}
-[data-skill="1"]::before {
-  width: 10%;
-  opacity: 1;
-}
-[data-skill="9"]::before {
-  width: 90%;
-}
-[data-skill="5"]::before {
-  width: 50%;
-}
-[data-skill="7"]::before {
-  width: 70%;
-}
-.skills-secondary .skill {
-  opacity: 0.7;
-}
-.skills-secondary::before {
-  /* Other must have Opacity:1; */
-  content: "Other";
-}
-.experience:last-child {
-  /* Section Exp*/
-  display: none;
-}
-.experience-type {
-  color: red;
-}
-.experience-institution {
-  color: red;
-}
-.experience-details {
-  margin-top: -1.3rem;
-  margin-left: 1rem;
-}
-.experience-location {
-  color: gray;
-}
-.day {
-  color: gray;
-}
-.experience-date-separator {
-  color: red;
-}
-.month {
-  color: gray;
-}
-.year {
-  color: gray;
-}
-#education {
-  display: none;
-}
-#hobbies {
-  display: none;
 }
 
-ul li::marker {
-  color: black;
-  font-size: initial;
+.content > section > h3 {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-#contact {
-  /*Couldn't make the flex-box grow with the background-color */
-  display: none;
-  width: 100%;
+
+.skills-secondary::before {
+  content: "Now";
+  color: red;
 }
-#contact h3 {
-  display: none;
+
+.skills-primary::before {
+  content: "Main";
+  color: red;
+  line-height: 2em;
+  display: flex;
 }
+
+.skill {
+  background: cyan;
+  margin: 0.5em 0;
+  position: relative;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill > span {
+  position: absolute;
+  z-index: 100;
+  color: white;
+}
+
+.skill::after {
+  content: "";
+  background: red;
+  height: 1em;
+  top: 50%;
+}
+
+[data-skill="5"]::after {
+  width: 50%;
+}
+
+[data-skill="3"]::after {
+  width: 30%;
+}
+
+[data-skill="9"]::after {
+  width: 70%;
+}
+
+[data-skill="7"]::after {
+  width: 40%;
+}
+
+[data-skill="1"]::after {
+  width: 25%;
+}
+
 .contacts {
   display: flex;
-  width: 35%;
   flex-direction: column;
-  margin-top: 2.5rem;
-  position: absolute;
-  top: 0;
-  right: 0;
 }
-.contact-email {
-  color: white;
-}
-.contact-type {
-  background-color: red;
-  color: white;
-  width: 20%;
-  flex-grow: 1;
-}
-.contact-value {
-  color: red;
-  background-color: black;
-  width: 75%;
-  flex-grow: 2;
-}
-.contact-value :link {
-  color: red;
-  text-decoration: none;
-}
-.contact-value a:visited {
-  color: red;
-}
-.contact-value a:active {
-  color: red;
-}
-dl {
-  margin: 0;
-  display: flex;
-}
+
+dl,
+dt,
 dd {
-  display: flex;
   margin: 0;
+  padding: 0;
 }
-@media (min-width: 600px) {
-  header div {
-    display: flex;
-    flex-direction: row;
-    margin-left: 5rem;
-  }
-  figure {
-    padding-left: 7rem;
-  }
-  .content {
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .content section {
-    width: 50%;
-  }
-  .experience:last-child {
-    display: inherit;
-  }
-  #education {
-    display: block;
-  }
-  #hobbies {
-    display: block;
-  }
-  #contact {
-    display: flex;
-  }
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.5em;
+  justify-content: space-between;
+  background: linear-gradient(to right, rgb(240, 11, 11), rgb(33, 85, 7));
+  color: white;
+}
+.contact a {
+  text-decoration: none;
+  color: white;
 }
